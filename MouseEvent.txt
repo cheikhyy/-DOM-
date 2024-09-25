@@ -1,0 +1,12 @@
+ Événements de souris (MouseEvent)
+mousedown : Se déclenche lorsque l'utilisateur appuie sur un bouton de la souris.
+mouseup : Se déclenche lorsque l'utilisateur relâche un bouton de la souris.
+click : Se déclenche lorsqu'un bouton de la souris est cliqué.
+dblclick : Se déclenche lorsque l'utilisateur fait un double-clic.
+mousemove : Se déclenche lorsque la souris est déplacée.
+mouseover : Se déclenche lorsque la souris passe sur un élément.
+mousewheel : Se déclenche lorsque l'utilisateur fait défiler la souris (molette).
+mouseout : Se déclenche lorsque la souris quitte un élément.
+contextmenu : Se déclenche lorsque l'utilisateur fait un clic droit pour ouvrir le menu contextuel.
+
+

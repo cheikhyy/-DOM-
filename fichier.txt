@@ -1,0 +1,22 @@
+Les méthodes et propriétés importantes :
+document.getElementById() : Sélectionne un élément par son ID.
+document.querySelector() : Sélectionne un élément avec un sélecteur CSS (par exemple, une classe, un ID, ou un tag).
+element.textContent : Modifie le contenu textuel d'un élément.
+element.style : Permet de changer les styles CSS d'un élément.
+
+
+un écouteur d'événements addEventListener() est utilisé pour détecter le clic sur le bouton.
+
+
+
+Les événements click, load, focusin, 
+et focusout sont des interactions courantes dans le DOM (Document Object Model) 
+en JavaScript qui permettent de répondre aux actions de l'utilisateur ou à l'état de certains éléments
+ sur une page web. 
+
+
+Voici les différentes utilisations de ces événements dans un scénario réel :
+
+click : Interagir avec des boutons ou des liens.
+load : Assurer que le contenu est entièrement chargé avant de déclencher des actions.
+focusin et focusout : Gérer les interactions avec les champs de formulaire pour améliorer l'expérience utilisateur.

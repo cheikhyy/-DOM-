@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événement Click</title>
+</head>
+<body>
+    <button id="monBouton">Cliquez ici</button>
+
+    <script>
+        const bouton = document.getElementById('monBouton');
+        // Ajoute un écouteur d'événement 'click' au bouton  
+        //Cet événement est déclenché lorsqu'un utilisateur clique sur un élément.
+        bouton.addEventListener('click', () => {
+            alert("Vous avez cliqué sur le bouton !");
+        });
+
+        //Lorsque l'utilisateur clique sur le bouton, une alerte s'affiche avec un message.
+    </script>
+</body>
+</html>

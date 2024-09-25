@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction avec le DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #titre {
+            color: darkblue;
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Titre modifiable avec interaction -->
+    <h1 id="titre">Bienvenue sur ma page</h1>
+    <button id="changerTexte">Changer le titre</button>
+
+    <!-- Liste d'éléments avec interaction -->
+    <h2>Liste des éléments</h2>
+    <ul id="liste">
+        <li>Élément 1</li>
+        <li>Élément 2</li>
+        <li>Élément 3</li>
+    </ul>
+    <button id="ajouterElement">Ajouter un élément</button>
+
+    <script>
+        // Sélectionner le titre et le bouton
+        const titre = document.getElementById('titre');
+        const btnChangerTexte = document.getElementById('changerTexte');
+
+        // Interaction avec l'utilisateur pour changer le texte du titre
+        btnChangerTexte.addEventListener('click', () => {
+            const nouveauTitre = prompt("Entrez le nouveau titre :");
+            if (nouveauTitre) { // Si l'utilisateur entre un titre, on modifie le texte
+                titre.textContent = nouveauTitre;
+                titre.style.color = 'green'; // Changer la couleur du titre
+            } else {
+                alert("Le titre n'a pas été modifié."); // Si l'utilisateur annule, on ne fait rien
+            }
+        });
+
+        // Sélectionner la liste et le bouton pour ajouter des éléments
+        const liste = document.getElementById('liste');
+        const btnAjouterElement = document.getElementById('ajouterElement');
+
+        // Interaction avec l'utilisateur pour confirmer l'ajout d'un élément
+        btnAjouterElement.addEventListener('click', () => {
+            const confirmation = confirm("Voulez-vous vraiment ajouter un nouvel élément ?");
+            if (confirmation) { // Si l'utilisateur confirme
+                const nouvelElement = document.createElement('li');
+                nouvelElement.textContent = 'Nouvel élément ajouté';
+                liste.appendChild(nouvelElement); // Ajouter à la liste
+            } else {
+                alert("Aucun élément n'a été ajouté.");
+            }
+        });
+
+
+       // document.createElement('li') : Crée un nouvel élément <li>.
+//nouvelElement.textContent = 'Nouvel élément' : Ajoute du texte à l'élément créé.
+//liste.appendChild(nouvelElement) : Ajoute l'élément <li> à la fin de la liste <ul>.
+//Chaque fois que l'utilisateur clique sur le bouton, un nouvel élément de liste est ajouté à la liste.
+    </script>
+</body>
+</html>

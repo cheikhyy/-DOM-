@@ -1,0 +1,25 @@
+Changer le titre avec prompt() :
+
+Lorsque l'utilisateur clique sur le bouton « Changer le titre »,
+ une boîte de dialogue prompt() s'affiche, lui demandant d'entrer un nouveau titre.
+Si l'utilisateur entre un texte et clique sur "OK",
+ le titre de la page est mis à jour avec cette nouvelle valeur.
+Si l'utilisateur annule ou laisse le champ vide, une alerte indique que le titre n'a pas été modifié.
+Confirmation avec confirm() avant d'ajouter un élément :
+
+
+Avant d'ajouter un élément à la liste, une boîte de dialogue confirm() 
+demande à l'utilisateur de confirmer son action.
+Si l'utilisateur clique sur "OK", le nouvel élément est ajouté à la liste.
+Si l'utilisateur clique sur "Annuler", une alerte indique que rien n'a été ajout
+
+
+
+
+
+L'interaction avec l'utilisateur est une partie clé de la manipulation du DOM en JavaScript.
+Pour intégrer cette interaction, on peut utiliser des boîtes de dialogue comme alert(), prompt() et confirm(), 
+ou bien des événements liés aux actions de l'utilisateur, comme le clic sur un bouton ou la saisie de texte.
+
+Exercice:
+créer un formulaire qui utilise un prompt() pour demander un nom, et ajoute ce nom à une liste après confirmation.

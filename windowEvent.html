@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements de fenêtre</title>
+</head>
+<body>
+    <h1>Défilez ou redimensionnez la fenêtre</h1>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            console.log('La page a été défilée');
+        });
+
+        window.addEventListener('resize', () => {
+            console.log('La fenêtre a été redimensionnée');
+        });
+    </script>
+</body>
+</html>

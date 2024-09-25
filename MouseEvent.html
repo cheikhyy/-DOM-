@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements de souris</title>
+</head>
+<body>
+    <div id="zone" style="width: 200px; height: 200px; background-color: lightblue;">Passez la souris ici</div>
+   
+
+    
+    <script>
+
+//Exemple pour click, mouseover, et mouseout 
+
+      const zone = document.getElementById('zone');
+
+        zone.addEventListener('click', () => {
+            alert('Zone cliquée!');
+        });
+
+        zone.addEventListener('mouseover', () => {
+            zone.style.backgroundColor = 'yellow';
+        });
+
+        zone.addEventListener('mouseout', () => {
+            zone.style.backgroundColor = 'lightblue';
+        });
+    </script>
+</body>
+</html>

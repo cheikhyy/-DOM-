@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements de clavier</title>
+</head>
+<body>
+    <input type="text" id="champTexte" placeholder="Tapez quelque chose">
+
+    <script>
+        const input = document.getElementById('champTexte');
+
+        input.addEventListener('keydown', (event) => {
+            console.log('Touche enfoncée : ' + event.key);
+        });
+
+        input.addEventListener('keyup', (event) => {
+            console.log('Touche relâchée : ' + event.key);
+        });
+    </script>
+</body>
+</html>

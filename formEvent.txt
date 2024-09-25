@@ -1,0 +1,4 @@
+focus : Se déclenche lorsqu'un élément (par exemple, un champ de formulaire) reçoit le focus.
+blur(flou) : Se déclenche lorsqu'un élément perd le focus.
+change : Se déclenche lorsque la valeur d'un élément (comme un champ de saisie) change.
+submit : Se déclenche lorsque l'utilisateur soumet un formulaire.

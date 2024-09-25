@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de Formulaire avec JavaScript</title>
+</head>
+<body>
+    <form id="inscription" onsubmit="return validerFormulaire()">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom">
+        <span id="nomErreur" style="color: red;"></span> <!-- Affichage de l'erreur -->
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email">
+        <span id="emailErreur" style="color: red;"></span>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age">
+        <span id="ageErreur" style="color: red;"></span>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <script>
+        function validerFormulaire() {
+            let nom = document.getElementById('nom').value;
+            let email = document.getElementById('email').value;
+            let age = document.getElementById('age').value;
+            let isValid = true;
+
+            // Réinitialiser les messages d'erreur
+            document.getElementById('nomErreur').innerText = '';
+            document.getElementById('emailErreur').innerText = '';
+            document.getElementById('ageErreur').innerText = '';
+
+            // Validation du nom
+            if (nom === '') {
+                document.getElementById('nomErreur').innerText = 'Le nom est requis.';
+                isValid = false;
+            }
+
+            // Validation de l'email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailErreur').innerText = 'Veuillez entrer un email valide.';
+                isValid = false;
+            }
+            //emailPattern.test(email) : Cela vérifie si la valeur de email correspond au modèle défini 
+            //par emailPattern.
+        //Si l'email ne correspond pas (! signifie "non"), nous affichons un message d'erreur.
+        
+
+            // Validation de l'âge
+            if (age < 18 || age > 100) {
+                document.getElementById('ageErreur').innerText = 'L\'âge doit être compris entre 18 et 100.';
+                isValid = false;
+            }
+
+            return isValid; // Retourne false si la validation échoue
+        }
+    </script>
+</body>
+</html>
+
+<!-- Dans cet exemple :
+
+Si le champ Nom est vide, un message d'erreur personnalisé apparaît sous le champ.
+Si l'Email n'est pas valide, un message d'erreur s'affiche également.
+Si l'Âge n'est pas compris entre 18 et 100, une alerte est déclenchée. -->

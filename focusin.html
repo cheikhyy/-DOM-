@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événement Focusin</title>
+</head>
+<body>
+    <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom">
+    </form>
+
+    <script>
+        const inputNom = document.getElementById('nom');
+        
+        // Ajoute un écouteur d'événement 'focusin' à l'élément input
+        inputNom.addEventListener('focusin', () => {
+            console.log("Le champ Nom a reçu le focus.");
+        });
+    </script>
+
+
+<!-- Lorsque l'utilisateur clique dans le champ de texte, 
+le focus est activé, et un message est affiché dans la console. -->
+</body>
+</html>

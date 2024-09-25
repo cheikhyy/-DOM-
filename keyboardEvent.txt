@@ -1,0 +1,5 @@
+Événements de clavier (KeyboardEvent)
+keydown : Se déclenche lorsqu'une touche du clavier est enfoncée.
+keypress : Se déclenche lorsqu'une touche est enfoncée et 
+envoie un caractère (peut ne pas être pris en charge par tous les navigateurs).
+keyup : Se déclenche lorsque l'utilisateur relâche une touche du clavier.

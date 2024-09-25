@@ -1,0 +1,91 @@
+Explication de chaque partie
+<form> : Le formulaire qui contient les différents champs à remplir.
+onsubmit="return validerFormulaire()" : Lors de la soumission du formulaire, la fonction JavaScript validerFormulaire
+ est appelée.
+ Si elle retourne false, 
+le formulaire ne sera pas soumis.
+
+<input type="text"> : Champ de texte pour entrer des informations.
+<input type="email"> : Champ de saisie pour un email.
+<input type="number"> : Champ pour entrer un nombre avec des restrictions de valeur (min et max).
+
+<span> : Utilisé ici pour afficher les messages d'erreur.
+document.getElementById() : JavaScript utilise cette fonction pour accéder aux éléments du DOM (Document Object Model).
+if (...) : Vérifie une condition, et si elle est fausse, affiche un message d'erreur et empêche l'envoi du formulaire.
+
+
+
+
+
+
+Code Concerné:
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+1. ^
+Signification : Indique le début de la chaîne.
+Utilité : Garantit que la correspondance commence dès le premier caractère.
+
+
+2. [a-zA-Z0-9._-]
+Signification : Définit un ensemble de caractères valides qui peuvent apparaître
+ dans la partie locale (avant le @) de l'adresse e-mail.
+a-z : Lettres minuscules (de a à z).
+A-Z : Lettres majuscules (de A à Z).
+0-9 : Chiffres (de 0 à 9).
+. : Le point (.) est autorisé.
+_ : Le souligné (_) est autorisé.
+- : Le tiret (-) est autorisé.
++ : Indique qu'il doit y avoir au moins un ou plusieurs de ces caractères.
+
+
+3. @
+Signification : Indique la présence obligatoire du symbole @.
+Utilité : Sépare la partie locale de la partie du domaine de l'adresse e-mail.
+
+4. [a-zA-Z0-9.-]
+Signification : Définit un ensemble de caractères valides pour la partie du domaine (après le @).
+a-z : Lettres minuscules.
+A-Z : Lettres majuscules.
+0-9 : Chiffres.
+. : Le point (.) est autorisé (pour séparer les sous-domaines).
+- : Le tiret (-) est autorisé (pour des noms de domaine).
++ : Indique qu'il doit y avoir au moins un ou plusieurs de ces caractères.
+
+
+5. \.
+Signification : Représente un point (.) littéral.
+Utilité : Comme le point est un caractère spécial en regex (qui correspond à n'importe quel caractère),
+ nous utilisons \ pour échapper le point et indiquer qu'on veut un point réel.
+
+
+6. [a-zA-Z]
+Signification : Définit un ensemble de caractères valides pour la partie de l'extension de domaine.
+
+a-z : Lettres minuscules.
+A-Z : Lettres majuscules.
+{2,6} : Indique que cette partie doit contenir entre 2 et 6 lettres (exemples : .com, .net, .org).
+
+7. $
+Signification : Indique la fin de la chaîne.
+Utilité : Garantit que la correspondance se termine au dernier caractère.
+Exemple de Correspondance
+Voyons quelques exemples d'adresses e-mail qui correspondraient à ce modèle, 
+et quelques-unes qui ne le feraient pas :
+
+Correspondent
+exemple@gmail.com (valide)
+mon.nom@domaine.fr (valide)
+utilisateur123@mon-site.com (valide)
+Ne correspondent pas
+exemple@.com (invalides, point manquant avant com)
+@gmail.com (invalides, pas de nom d'utilisateur)
+exemple@domaine..com (invalides, deux points consécutifs dans le domaine)
+Résumé
+L'utilisation d'expressions régulières, comme emailPattern, permet de valider des formats spécifiques, 
+garantissant que les utilisateurs saisissent des données conformes aux normes établies.
+ Cela est particulièrement utile pour des champs comme les adresses e-mail, où la structure est cruciale
+
+
+ Conclusion
+La validation des formulaires permet de protéger l'intégrité des données 
+et d'améliorer l'expérience utilisateur en fournissant des indications immédiates sur les erreurs. 
+La combinaison d'HTML5 et de JavaScript offre une validation robuste et personnalisable.

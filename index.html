@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple DOM</title>
+</head>
+<body>
+  <h1 id="titre">Bonjour, monde !</h1>
+  <button onclick="changerTitre()">Changer le titre</button>
+
+  <script>
+    function changerTitre() {
+      // Sélection de l'élément avec l'id 'titre'
+      let titre = document.getElementById("titre");
+      // Changement du contenu textuel de l'élément sélectionné
+      titre.textContent = "Titre modifié avec le DOM!";
+
+    }
+    //Le DOM permet à JavaScript de sélectionner l'élément <h1> par son ID (document.getElementById("titre")).
+    //Une fois sélectionné, vous pouvez modifier son texte avec textContent.
+  </script>
+</body>
+</html>

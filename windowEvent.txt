@@ -1,0 +1,5 @@
+scroll : Se déclenche lorsque l'utilisateur fait défiler la page.
+resize : Se déclenche lorsque la fenêtre est redimensionnée.
+hashchange : Se déclenche lorsque le fragment de l'URL (après le #) change.
+load : Se déclenche lorsque la page et ses ressources (comme les images) sont entièrement chargées.
+unload : Se déclenche lorsque l'utilisateur quitte la page (par exemple, lors de la fermeture de l'onglet).

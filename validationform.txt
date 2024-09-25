@@ -1,0 +1,15 @@
+La validation de formulaire en HTML et JavaScript est cruciale pour garantir que les données saisies par l'utilisateur sont correctes avant d'être envoyées au serveur. Elle peut être effectuée de deux manières :
+
+Validation côté client (avec HTML et JavaScript).
+Validation côté serveur (après soumission).
+Voici comment vous pouvez valider un formulaire en HTML et JavaScript.
+
+1. Validation en HTML avec les attributs de formulaire
+HTML5 offre plusieurs attributs intégrés qui facilitent la validation de base :
+
+required : Champ obligatoire.
+pattern : Utilisé pour valider un champ selon une expression régulière.
+min, max, minlength, maxlength : Utilisés pour définir les valeurs minimales et maximales ou la longueur du champ.
+type : Définir le type de données (par exemple, email, number).
+
+

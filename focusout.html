@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événement Focusout</title>
+</head>
+
+
+<body>
+    <form>
+        <label for="email">Email :</label>
+        <input type="email" id="email">
+    </form>
+
+    <script>
+        const inputEmail = document.getElementById('email');
+        
+        // Ajoute un écouteur d'événement 'focusout' à l'élément input
+        inputEmail.addEventListener('focusout', () => {
+            console.log("Le champ Email a perdu le focus.");
+        });
+
+        //Cet événement est déclenché lorsqu'un élément perd le focus. C'est l'opposé de focusin.
+
+        //Lorsque l'utilisateur quitte le champ de saisie de l'email, 
+        //un message est affiché dans la console indiquant que le champ a perdu le focus.
+    </script>
+</body>
+</html>

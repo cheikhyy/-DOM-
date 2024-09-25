@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements de formulaire</title>
+</head>
+<body>
+    <form id="monFormulaire">
+        <input type="text" id="champTexte" placeholder="Nom">
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <script>
+
+      //Exemple pour focus, blur, et submit :
+
+        const input = document.getElementById('champTexte');
+        const form = document.getElementById('monFormulaire');
+
+        input.addEventListener('focus', () => {
+            input.style.backgroundColor = 'lightgreen';
+        });
+
+        input.addEventListener('blur', () => {
+            input.style.backgroundColor = 'white';
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Empêche le rechargement de la page
+            alert('Formulaire soumis');
+        });
+    </script>
+</body>
+</html>
